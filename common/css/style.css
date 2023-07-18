@@ -9,6 +9,7 @@
 
 body {
   font-family: "Pretendard-Regular", sans-serif !important;
+  overflow-x: hidden;
 }
 
 .container,
@@ -190,7 +191,7 @@ section {
   height: 100vh;
 }
 
-section > div:not(.section5-item, .section6-item) {
+section > div:not(.section5-item, .section6-slide-wrap, .section7-wrap) {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -263,13 +264,17 @@ section .section-desc {
 .section2 {
   padding: 0 120px;
   box-sizing: border-box;
-  background: #13374B url("/common/images/home_rozy.png") no-repeat top right / cover;
+  background: #13374B url("/common/images/main/home_rozy.png") no-repeat top right / cover;
+}
+
+.section2 .section-tit span {
+  display: inline-block;
 }
 
 .section3 {
   padding: 0 120px;
   box-sizing: border-box;
-  background: #B0CFD4 url("/common/images/home_hogonheil.png") no-repeat bottom left / contain;
+  background: #B0CFD4 url("/common/images/main/home_hogonheil.png") no-repeat bottom left / contain;
 }
 
 .section3 > div {
@@ -279,7 +284,7 @@ section .section-desc {
 .section4 {
   padding: 0 120px;
   box-sizing: border-box;
-  background: #E1ECED url("/common/images/home_ryuid.jpg") no-repeat center right / contain;
+  background: #E1ECED url("/common/images/main/home_ryuid.jpg") no-repeat center right / contain;
 }
 
 .section4 > div {
@@ -321,7 +326,7 @@ section .section-desc {
 
 .section5 .section5-item .text-wrap .section-tit {
   font-family: "dystopian", sans-serif;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
   word-break: break-all;
 }
@@ -329,7 +334,7 @@ section .section-desc {
 .section5 .section5-item .text-wrap .section-tit span {
   display: block;
   margin-top: 15px;
-  font-size: 85px;
+  font-size: 102px;
   line-height: 1.18;
 }
 
@@ -339,13 +344,200 @@ section .section-desc {
   letter-spacing: -0.02em;
 }
 
+.section5 .section5-item .text-wrap .section-desc span {
+  display: block;
+  word-break: break-all;
+}
+
+.section5 .section5-item .text-wrap .explore-button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 18px 42px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
 .section6 {
+  width: 350%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: #000;
   color: #fff;
 }
 
+.section6 .section6-slide-wrap {
+  display: flex;
+  width: 350%;
+}
+
+.section6 h3 {
+  width: 100%;
+  font-family: "dystopian", sans-serif;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: center;
+}
+
+.section6 .section6-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  padding: 100px 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.section6 .section6-item .section-tit {
+  position: relative;
+  z-index: 1;
+  font-family: "dystopian", "Pretendard", sans-serif !important;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+.section6 .section6-item .section-tit span {
+  margin-bottom: 16px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 13px;
+}
+
+.section6 .section6-item video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section6 .section6-item img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  object-fit: cover;
+}
+
 .section7 {
   height: auto;
+  padding: 160px 120px 240px;
+  box-sizing: border-box;
   background-color: #000;
   color: #fff;
+}
+
+.section7 .section7-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section7 h3 {
+  margin-bottom: 100px;
+  font-family: "dystopian", "Pretendard", sans-serif !important;
+  font-weight: 600;
+  font-size: 80px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.section7 ul li {
+  position: relative;
+  height: 320px;
+  border-top: 1px solid #444;
+}
+
+.section7 ul li:last-of-type {
+  border-bottom: 1px solid #444;
+}
+
+.section7 ul li .news-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 320px;
+}
+
+.section7 ul li .news-thumb img {
+  width: 20em !important;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section7 ul li .news-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.section7 ul li .news-wrap .date {
+  width: 35%;
+  font-family: "Pretendard", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.section7 ul li .news-wrap > div {
+  width: 65%;
+}
+
+.section7 ul li .news-wrap .category {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.section7 ul li .news-wrap .news-tit {
+  position: relative;
+  padding-bottom: 2px;
+  background: linear-gradient(currentColor, currentColor);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 0.07em;
+  transition: background-size 0.4s ease;
+  font-family: "dystopian", "Pretendard", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.section7 ul li .news-wrap .news-tit:hover {
+  background-position: 0 100%;
+  background-size: 100% 0.07em;
+}
+
+.section7 .more-news-button {
+  display: block;
+  margin: 70px auto 0;
+  padding: 18px 42px;
+  box-sizing: border-box;
+  background: none;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  font-family: "Pretendard", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.awwwards-winner {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transform: translateY(-50%);
 }
