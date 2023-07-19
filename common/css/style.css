@@ -234,8 +234,24 @@ section .section-desc {
   color: #fff;
 }
 
+.section1 h2 p {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section1 h2 p:last-of-type {
+  margin-bottom: 0;
+}
+
 .section1 h2 span {
   display: block;
+  position: relative;
+  top: 104px;
+  transition: 0.5s ease-out;
+}
+
+.section1 h2 span.show {
+  top: 0;
 }
 
 .section1 .scroll-button {
@@ -267,8 +283,33 @@ section .section-desc {
   background: #13374B url("/common/images/main/home_rozy.png") no-repeat top right / cover;
 }
 
+.section2 .section-tit {
+  overflow: hidden;
+}
+
 .section2 .section-tit span {
   display: inline-block;
+  position: relative;
+  top: 45px;
+  transition: 0.5s ease-out;
+}
+
+.section2 .section-tit span.show {
+  top: 0;
+}
+
+.section2 .section-desc {
+  overflow: hidden;
+}
+
+.section2 .section-desc span {
+  position: relative;
+  top: 25px;
+  transition: 0.5s ease-out;
+}
+
+.section2 .section-desc span.show {
+  top: 0;
 }
 
 .section3 {
@@ -393,7 +434,25 @@ section .section-desc {
   padding: 100px 120px;
   box-sizing: border-box;
   overflow: hidden;
-  cursor: pointer;
+}
+
+.section6 .section6-item:not(.section6 .section6-item:first-of-type)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.section6 .section6-item:not(.section6 .section6-item:first-of-type):hover::after {
+  visibility: visible;
+  opacity: 1;
 }
 
 .section6 .section6-item .section-tit {
@@ -402,6 +461,8 @@ section .section-desc {
   font-family: "dystopian", "Pretendard", sans-serif !important;
   font-weight: 600;
   font-size: 32px;
+  color: #fff;
+  text-decoration: none;
   line-height: 1.3;
 }
 
@@ -409,6 +470,11 @@ section .section-desc {
   margin-bottom: 16px;
   font-family: "Pretendard", sans-serif;
   font-size: 13px;
+}
+
+.section6 .section6-item .section-tit a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .section6 .section6-item video {
@@ -423,8 +489,11 @@ section .section-desc {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   object-fit: cover;
+  object-position: top center;
 }
 
 .section7 {
@@ -466,7 +535,27 @@ section .section-desc {
   height: 320px;
 }
 
+.section7 ul li .news-thumb::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.section7 ul li:hover .news-thumb::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 .section7 ul li .news-thumb img {
+  position: relative;
   width: 20em !important;
   height: 100%;
   object-fit: cover;
