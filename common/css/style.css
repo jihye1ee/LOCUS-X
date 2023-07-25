@@ -199,20 +199,43 @@ section > div:not(.section5-item, .section6-slide-wrap, .section7-wrap) {
   color: #fff;
 }
 
-section .section-tit span {
-  display: block;
+section .sub-tit {
+  overflow: hidden;
+}
+
+section .sub-tit span {
+  display: inline-block;
+  position: relative;
+  top: 45px;
+  transition: 0.5s ease-out;
   font-family: "dystopian", sans-serif;
   font-size: 46px;
   line-height: 1.18;
 }
 
-section .section-desc {
+section .sub-tit span.show {
+  top: 0;
+}
+
+section .sub-desc {
   margin-top: 23px;
-  font-family: "dystopian", "Pretendard", sans-serif!important;
+  overflow: hidden;
+  font-family: "dystopian", "Pretendard", sans-serif !important;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.3;
 }
+
+section .sub-desc span {
+  position: relative;
+  top: 25px;
+  transition: 0.5s ease-out;
+}
+
+section .sub-desc span.show {
+  top: 0;
+}
+
 
 .section1 {
   position: relative;
@@ -281,35 +304,6 @@ section .section-desc {
   padding: 0 120px;
   box-sizing: border-box;
   background: #13374B url("/common/images/main/home_rozy.png") no-repeat top right / cover;
-}
-
-.section2 .section-tit {
-  overflow: hidden;
-}
-
-.section2 .section-tit span {
-  display: inline-block;
-  position: relative;
-  top: 45px;
-  transition: 0.5s ease-out;
-}
-
-.section2 .section-tit span.show {
-  top: 0;
-}
-
-.section2 .section-desc {
-  overflow: hidden;
-}
-
-.section2 .section-desc span {
-  position: relative;
-  top: 25px;
-  transition: 0.5s ease-out;
-}
-
-.section2 .section-desc span.show {
-  top: 0;
 }
 
 .section3 {
