@@ -1,4 +1,16 @@
 window.onload = function() {
+  const mouseCursor = $(".cursor");
+
+  function cursor(e) {
+    mouseCursor.css({
+      top: e.pageY - scrollY + "px",
+      left: e.pageX + "px"
+    })
+  }
+
+  $(window).on("scroll", cursor);
+  $(window).on("mousemove", cursor);
+
   gsap.registerPlugin(ScrollTrigger);
 
   const horizontalScroll = gsap.timeline()
