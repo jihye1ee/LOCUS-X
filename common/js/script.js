@@ -1,8 +1,6 @@
 window.onload = function() {
-  const mouseCursor = $(".cursor");
-
   function cursor(e) {
-    mouseCursor.css({
+    $(".cursor").css({
       top: e.pageY - scrollY + "px",
       left: e.pageX + "px"
     })
