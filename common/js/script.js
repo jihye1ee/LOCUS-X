@@ -3,10 +3,20 @@ window.onload = function() {
     $(".cursor").css({
       top: e.pageY - scrollY + "px",
       left: e.pageX + "px"
-    })
+    });
   }
 
-  $(window).on("scroll", cursor);
+  function scrollEvent(e) {
+    if($(window).scrollTop() > 0) {
+      $("header").addClass("scroll");
+    } else {
+      $("header").removeClass("scroll");
+    }
+
+    cursor(e);
+  }
+
+  $(window).on("scroll", scrollEvent);
   $(window).on("mousemove", cursor);
 
   gsap.registerPlugin(ScrollTrigger);
@@ -76,5 +86,29 @@ window.onload = function() {
         once: true
       },
     });
+  });
+
+  $(".img-hover").hover(function() {
+    $(".cursor").addClass("img-cursor");
+  }, function() {
+    $(".cursor").removeClass("img-cursor");
+  });
+
+  $(".explore-button").hover(function() {
+    $(".cursor").addClass("explore-cursor");
+  }, function() {
+    $(".cursor").removeClass("explore-cursor");
+  });
+
+  $(".list-hover").hover(function() {
+    $(".cursor").addClass("list-cursor");
+
+    if($(this).hasClass("news-tit")) {
+      $(".cursor").text("View News");
+    } else {
+      $(".cursor").text("View Project");
+    }
+  }, function() {
+    $(".cursor").removeClass("list-cursor").text("");
   });
 }
