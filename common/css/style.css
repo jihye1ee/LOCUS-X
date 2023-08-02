@@ -426,7 +426,7 @@ section.scroll-motion.active .section-desc span {
   transition: 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
-.section5 .section5-item:nth-of-type(2) .image-wrap::after {
+.section5 .section5-item.right .image-wrap::after {
   right: 0;
   left: initial;
 }
@@ -436,8 +436,18 @@ section.scroll-motion.active .section-desc span {
 }
 
 .section5 .section5-item .image-wrap img {
+  position: relative;
+  left: auto;
   width: 100%;
   transform: translate3d(-2.8093%, 0%, 0px) scale(1.2, 1.2);
+}
+
+.section5 .section5-item.left .image-wrap img {
+  left: auto;
+}
+
+.section5 .section5-item.right .image-wrap img {
+  right: auto;
 }
 
 .section5 .section5-item .text-wrap {

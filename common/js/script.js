@@ -55,6 +55,31 @@ window.onload = function() {
     });
   });
 
+  $(".section5").each(function(){
+    gsap.to($(this).find(".section5-item.left img"), {
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top 40%",
+        end:"bottom center",
+        scrub: 1,
+        markers: true,
+      },
+      left: "10%",
+    });
+  });
+
+  $(".section5").each(function(){
+    gsap.to($(this).find(".section5-item.right img"), {
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top 40%",
+        end:"bottom center",
+        scrub: 1,
+      },
+      right: "10%",
+    });
+  });
+
   $(".section5-item").each(function(q){
     gsap.to($(this), {
       scrollTrigger: {
