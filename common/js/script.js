@@ -1,8 +1,8 @@
 window.onload = function() {
   function cursor(e) {
     $(".cursor").css({
-      top: e.pageY - scrollY + "px",
-      left: e.pageX + "px"
+      top: e.clientY + "px",
+      left: e.clientX + "px"
     });
   }
 
@@ -124,6 +124,12 @@ window.onload = function() {
     });
   });
 
+  $(".menu-button").hover(function() {
+    $(".cursor").addClass("menu-cursor");
+  }, function() {
+    $(".cursor").removeClass("menu-cursor");
+  });
+
   $(".img-hover").hover(function() {
     $(".cursor").addClass("img-cursor");
   }, function() {
@@ -146,5 +152,11 @@ window.onload = function() {
     }
   }, function() {
     $(".cursor").removeClass("list-cursor").text("");
+  });
+
+  $(".more-news-button").hover(function() {
+    $(".cursor").addClass("more-cursor");
+  }, function() {
+    $(".cursor").removeClass("more-cursor");
   });
 }
