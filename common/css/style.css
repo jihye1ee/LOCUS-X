@@ -368,13 +368,13 @@ section.scroll-motion.active .section-desc span {
 .section2 {
   padding: 0 120px;
   box-sizing: border-box;
-  background: #13374B url("common/images/main/home_rozy.png") no-repeat top right / cover;
+  background: #13374B url("images/main/home_rozy.png") no-repeat top right / cover;
 }
 
 .section3 {
   padding: 0 120px;
   box-sizing: border-box;
-  background: #B0CFD4 url("common/images/main/home_hogonheil.png") no-repeat bottom left / contain;
+  background: #B0CFD4 url("images/main/home_hogonheil.png") no-repeat bottom left / contain;
 }
 
 .section3 > div {
@@ -384,7 +384,7 @@ section.scroll-motion.active .section-desc span {
 .section4 {
   padding: 0 120px;
   box-sizing: border-box;
-  background: #E1ECED url("common/images/main/home_ryuid.jpg") no-repeat center right / contain;
+  background: #E1ECED url("images/main/home_ryuid.jpg") no-repeat center right / contain;
 }
 
 .section4 > div {
