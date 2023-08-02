@@ -75,7 +75,7 @@ window.onload = function() {
         end:"bottom center",
         scrub: 1,
       },
-      right: "10%",
+      right: "5%",
     });
   });
 
