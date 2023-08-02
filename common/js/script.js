@@ -44,7 +44,7 @@ window.onload = function() {
   });
 
   $(".scroll-motion").each(function(){
-    gsap.to($(this).children(".section-txt-wrap"), {
+    gsap.to($(this).children(".txt-wrap"), {
       scrollTrigger: {
         trigger: $(this),
         start: "top 40%",
