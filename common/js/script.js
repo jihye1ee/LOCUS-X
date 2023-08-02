@@ -43,6 +43,18 @@ window.onload = function() {
     });
   });
 
+  $(".scroll-motion").each(function(){
+    gsap.to($(this).children(".section-txt-wrap"), {
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top 40%",
+        end:"bottom center",
+        scrub: 1,
+      },
+      top: "30%",
+    });
+  });
+
   $(".section5-item").each(function(q){
     gsap.to($(this), {
       scrollTrigger: {
