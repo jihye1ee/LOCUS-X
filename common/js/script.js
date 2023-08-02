@@ -62,7 +62,6 @@ window.onload = function() {
         start: "top 40%",
         end:"bottom center",
         scrub: 1,
-        markers: true,
       },
       left: "10%",
     });
