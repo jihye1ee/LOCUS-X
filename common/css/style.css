@@ -347,7 +347,7 @@ section.scroll-motion.active .section-desc span {
 .section1 h2 span {
   display: block;
   position: relative;
-  top: 100px;
+  top: 110px;
   transition: 0.5s ease-out;
 }
 
